@@ -1,0 +1,28 @@
+# Render blueprint (Docker). NOTE: Render's FREE web service sleeps after ~15 min
+# with no inbound traffic, which pauses the poll loop. To keep it awake for free,
+# point a free uptime pinger (e.g. UptimeRobot) at https://<your-app>/healthz every
+# 5 minutes — or use the Starter paid plan. Fly.io/Koyeb avoid this entirely.
+services:
+  - type: web
+    name: fiteasy-autobooker
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /healthz
+    envVars:
+      - key: FITEASY_EMAIL
+        sync: false
+      - key: FITEASY_PASSWORD
+        sync: false
+      - key: DASHBOARD_TOKEN
+        sync: false
+      - key: FITEASY_SHOP_SLUG
+        value: sauna60-room
+      - key: FITEASY_SHOP_ID
+        value: "230"
+      - key: TZ
+        value: Asia/Tokyo
+      - key: DEFAULT_LATEST_TIME
+        value: "18:00"
+      - key: DEFAULT_DRY_RUN
+        value: "true"

@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "dry_run": true,
+  "shop_id": "230",
+  "earliest_time": "00:00",
+  "latest_time": "18:00",
+  "date_from": null,
+  "date_to": null,
+  "allowed_weekdays": [0, 1, 2, 3, 4, 5, 6],
+  "min_improvement_minutes": 10,
+  "weeks_to_scan": 3,
+  "manage_existing": false,
+  "poll_min_seconds": 8.0,
+  "poll_max_seconds": 12.0,
+  "rebook_strategy": "book_then_cancel"
+}

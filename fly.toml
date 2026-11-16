@@ -1,0 +1,24 @@
+# Fly.io config — recommended host (always-on, light app fits the smallest VM).
+# Deploy:
+#   fly launch --no-deploy --copy-config --name fiteasy-autobooker --region nrt
+#   fly secrets set FITEASY_EMAIL=... FITEASY_PASSWORD=... DASHBOARD_TOKEN=...
+#   fly deploy
+app = "fiteasy-autobooker"
+primary_region = "nrt"   # Tokyo — close to FitEasy
+
+[build]
+
+[env]
+  TZ = "Asia/Tokyo"
+  DB_PATH = "/app/data/fiteasy.db"
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = false      # keep it running so the poll loop never sleeps
+  auto_start_machines = true
+  min_machines_running = 1
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "256mb"

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitEasy Auto-Booker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">♨</span>
+        <div>
+          <h1>FitEasy Auto-Booker</h1>
+          <span class="sub" id="shopLabel">sauna60-room · shop 230</span>
+        </div>
+      </div>
+      <div class="pills">
+        <span id="pillLogin" class="pill">login —</span>
+        <span id="pillEngine" class="pill">engine —</span>
+        <span id="pillMode" class="pill">mode —</span>
+        <span id="pillUpdated" class="pill">updated —</span>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card status">
+        <h2>Status</h2>
+        <div class="statrow"><span>Managed booking</span><b id="stCurrent">—</b></div>
+        <div class="statrow"><span>Your reservations</span><b id="stReservations">—</b></div>
+        <div class="statrow"><span>Last action</span><b id="stAction">—</b></div>
+        <div class="statrow"><span>Last check (JST)</span><b id="stCheck">—</b></div>
+        <div class="statrow"><span>Detected slots</span><b id="stDetected">—</b></div>
+        <div class="statrow err"><span>Last error</span><b id="stError">—</b></div>
+        <p class="muted small" id="freshNote"></p>
+      </section>
+
+      <section class="card prefs">
+        <h2>Preferences</h2>
+        <div class="field two">
+          <div><label>Enabled</label>
+            <select id="enabled"><option value="true">On</option><option value="false">Paused</option></select>
+          </div>
+          <div><label>Mode</label>
+            <select id="dry_run"><option value="true">Dry-run (no booking)</option><option value="false">LIVE (books for real)</option></select>
+          </div>
+        </div>
+        <div class="field"><label>Latest acceptable start (before)</label><input id="latest_time" type="time" /></div>
+        <div class="field"><label>Earliest acceptable start (from)</label><input id="earliest_time" type="time" /></div>
+        <div class="field two">
+          <div><label>Date from</label><input id="date_from" type="date" /></div>
+          <div><label>Date to</label><input id="date_to" type="date" /></div>
+        </div>
+        <div class="field"><label>Allowed weekdays</label><div class="weekdays" id="weekdays"></div></div>
+        <div class="field two">
+          <div><label>Min improvement (min)</label><input id="min_improvement_minutes" type="number" min="0" /></div>
+          <div><label>Rebook strategy</label>
+            <select id="rebook_strategy"><option value="book_then_cancel">book → cancel</option><option value="cancel_then_book">cancel → book</option></select>
+          </div>
+        </div>
+        <div class="field two">
+          <div><label>Weeks to scan</label><input id="weeks_to_scan" type="number" min="1" max="12" /></div>
+          <div><label>Manage existing bookings</label>
+            <select id="manage_existing"><option value="false">No — never cancel my manual bookings</option><option value="true">Yes — rebook my earliest reservation earlier</option></select>
+          </div>
+        </div>
+        <div class="field two">
+          <div><label>Poll min (s)</label><input id="poll_min_seconds" type="number" min="2" step="0.5" /></div>
+          <div><label>Poll max (s)</label><input id="poll_max_seconds" type="number" min="2" step="0.5" /></div>
+        </div>
+
+        <div class="field">
+          <label>GitHub token (to save changes from here)</label>
+          <input id="ghtoken" type="password" placeholder="ghp_… fine-grained token with Contents: write" />
+        </div>
+        <div class="btnrow">
+          <button id="btnSave">Save preferences</button>
+          <a id="editLink" class="ghost btnlike" href="#" target="_blank" rel="noopener">Edit on GitHub ↗</a>
+          <span id="saveMsg" class="savemsg"></span>
+        </div>
+        <p class="muted small">No token? Use “Edit on GitHub” to change <code>preferences.json</code> with your normal login.</p>
+      </section>
+
+      <section class="card slots">
+        <h2>Detected slots <span class="muted" id="slotsHint"></span></h2>
+        <div id="slotList" class="slotlist"><p class="muted">Loading…</p></div>
+      </section>
+
+      <section class="card log">
+        <h2>Activity log</h2>
+        <div id="logList" class="loglist"></div>
+      </section>
+    </main>
+    <footer class="foot">
+      Backend runs on GitHub Actions (every ~5 min, polling ~10s per run). Status
+      here refreshes every few minutes from the bot-state branch.
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
