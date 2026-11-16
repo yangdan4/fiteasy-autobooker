@@ -2,12 +2,61 @@
 
 An always-on bot that logs into your FitEasy member account, targets the
 **Narimasu (成増) Sauna60 room (shop 230)**, and books the **earliest slot that
-fits your rules** (default: any start time **before 18:00**). It re-checks every
-**~10 seconds (with jitter)** and, if an earlier acceptable slot opens up,
-**rebooks** to it automatically. A web dashboard lets you change the rules live.
+fits your rules** (default: any start time **before 18:00**). It re-checks the
+calendar continuously and, if an earlier acceptable slot opens up, **rebooks** to
+it automatically. A web dashboard lets you change the rules live.
 
 Lightweight (plain HTTP — FitEasy is a server-rendered Laravel site, no headless
-browser needed), so it deploys to a free cloud host in minutes.
+browser needed).
+
+## Two ways to run it
+
+1. **GitHub-native — 100% free, no credit card, no server (recommended).**
+   The booking engine runs as a **GitHub Actions** cron job; the dashboard is a
+   **GitHub Pages** site. Nothing to host, nothing to pay. See
+   [Free deploy on GitHub](#free-deploy-on-github-actions--pages) below.
+2. **Self-hosted FastAPI app** — one container you can run locally or on any
+   host (Render/Koyeb/Fly/your own box). See [Self-hosted](#self-hosted-fastapi).
+
+---
+
+## Free deploy on GitHub (Actions + Pages)
+
+This is already set up in this repo. The pieces:
+
+| Piece | File | What it does |
+|---|---|---|
+| Booking engine | `bot/runner.py` | logs in, scans the calendar, books/rebooks |
+| Schedule | `.github/workflows/bot.yml` | runs every 5 min; each run polls ~10s for ~4.5 min |
+| Preferences | `preferences.json` | your rules (edit from the dashboard or on GitHub) |
+| Live status | `bot-state` branch → `state.json` | written by the bot, read by the dashboard |
+| Dashboard | `docs/` → GitHub Pages | view status + edit preferences |
+
+**Why it's continuous & free:** public repos get **unlimited** standard Actions
+minutes. A 5-min cron is GitHub's minimum, so each run keeps a login session open
+and polls every ~10s for ~4.5 minutes; `concurrency` lets the next run queue so
+coverage is near-continuous. The bot's own state commits keep the repo active so
+the schedule is never auto-disabled (GitHub disables cron after 60 days idle).
+
+**Setup (already done here, for reference):**
+```bash
+gh repo create fiteasy-autobooker --public --source=. --push
+gh secret set FITEASY_EMAIL   --body 'you@example.com'
+gh secret set FITEASY_PASSWORD --body 'your-password'
+gh api -X POST repos/<owner>/fiteasy-autobooker/pages \
+   -f 'source[branch]=main' -f 'source[path]=/docs'
+gh workflow run bot.yml
+```
+
+**Going LIVE:** it ships in **dry-run** (detects + logs, books nothing) because a
+real reservation carries FitEasy's no-show penalty. To arm real booking, set
+`"dry_run": false` in `preferences.json` — either with the **Edit on GitHub**
+button on the dashboard (uses your normal login) or by toggling it in the
+dashboard after pasting a fine-grained GitHub token (Contents: write).
+
+**Note on cadence:** GitHub cron can be delayed under heavy platform load, so in
+practice checks are "every few minutes, continuous" rather than a hard 10s SLA.
+That's the trade-off for zero-cost, zero-card, always-on hosting.
 
 ---
 
@@ -31,7 +80,9 @@ is safer if multiple are allowed).
 
 ---
 
-## Quick start (local)
+## Self-hosted FastAPI
+
+Run the same engine as one process with a live (real-time) dashboard:
 
 ```bash
 cd fiteasy
