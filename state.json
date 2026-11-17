@@ -1,7 +1,7 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-18T07:10:39.622408",
+  "updated_at": "2026-11-18T07:10:52.123624",
   "current": null,
   "detected": [
     {
@@ -663,7 +663,7 @@
       "cancel_payload": {}
     }
   ],
-  "last_check": "2026-11-18T07:10:39.622557",
+  "last_check": "2026-11-18T07:10:52.123744",
   "last_action": "[DRY RUN] would book 11/24 14:00 (initial)",
   "last_error": null,
   "preferences": {
