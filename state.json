@@ -1,9 +1,25 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-19T05:45:00.370068",
+  "updated_at": "2026-11-19T05:45:54.656218",
   "current": null,
   "detected": [
+    {
+      "start": "2026-11-24T14:00:00",
+      "end": null,
+      "label": "11/24 14:00",
+      "slot_key": "2026-11-24T14:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F24&shop_id=230&start_time=14%3A00&deadline=2026-11-24+15%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
     {
       "start": "2026-11-26T11:00:00",
       "end": null,
@@ -627,27 +643,28 @@
       "cancel_action": null,
       "cancel_method": "get",
       "cancel_payload": {}
-    },
+    }
+  ],
+  "reservations": [
     {
-      "start": "2026-12-03T19:00:00",
+      "start": "2026-11-25T13:00:00",
       "end": null,
-      "label": "12/3 19:00",
-      "slot_key": "2026-12-03T19:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F03&shop_id=230&start_time=19%3A00&deadline=2026-12-03+20%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "label": "11/25 13:00",
+      "slot_key": "res-763685",
+      "available": false,
+      "room": "M-A",
+      "reservation_id": "763685",
+      "book_url": null,
       "book_action": null,
       "book_method": "get",
       "book_payload": {},
-      "cancel_action": null,
+      "cancel_action": "https://join.fiteasy.jp/mypage/sauna60-room/cancel/763685?date=2026%2F11%2F25&start_time=13%3A00&end_time=14%3A00&room=M-A&reservation_id=763685",
       "cancel_method": "get",
       "cancel_payload": {}
     }
   ],
-  "reservations": [],
-  "last_check": "2026-11-19T05:45:00.370162",
-  "last_action": "[DRY RUN] would book 11/26 11:00 (initial)",
+  "last_check": "2026-11-19T05:45:54.656305",
+  "last_action": "[DRY RUN] would book 11/24 14:00 (initial)",
   "last_error": null,
   "preferences": {
     "enabled": true,
@@ -683,6 +700,26 @@
       "ts": "2026-11-18T20:45:00.370040",
       "level": "info",
       "message": "[DRY RUN] would book 11/26 11:00 (initial)"
+    },
+    {
+      "ts": "2026-11-18T20:45:14.587777",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/24 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-18T20:45:28.102674",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/24 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-18T20:45:41.960152",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/24 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-18T20:45:54.656189",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/24 14:00 (initial)"
     }
   ]
 }
