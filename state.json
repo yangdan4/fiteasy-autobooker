@@ -1,9 +1,25 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-19T19:13:55.612249",
+  "updated_at": "2026-11-19T19:14:52.698280",
   "current": null,
   "detected": [
+    {
+      "start": "2026-11-20T15:00:00",
+      "end": null,
+      "label": "11/20 15:00",
+      "slot_key": "2026-11-20T15:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F20&shop_id=230&start_time=15%3A00&deadline=2026-11-20+16%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
     {
       "start": "2026-11-26T12:00:00",
       "end": null,
@@ -627,25 +643,25 @@
       "cancel_action": null,
       "cancel_method": "get",
       "cancel_payload": {}
-    },
-    {
-      "start": "2026-12-04T15:00:00",
-      "end": null,
-      "label": "12/4 15:00",
-      "slot_key": "2026-12-04T15:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F04&shop_id=230&start_time=15%3A00&deadline=2026-12-04+16%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
-      "book_action": null,
-      "book_method": "get",
-      "book_payload": {},
-      "cancel_action": null,
-      "cancel_method": "get",
-      "cancel_payload": {}
     }
   ],
   "reservations": [
+    {
+      "start": "2026-11-19T11:00:00",
+      "end": null,
+      "label": "11/19 11:00",
+      "slot_key": "res-769090",
+      "available": false,
+      "room": "M-A",
+      "reservation_id": "769090",
+      "book_url": null,
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": "https://join.fiteasy.jp/mypage/sauna60-room/cancel/769090?date=2026%2F11%2F19&start_time=11%3A00&end_time=12%3A00&room=M-A&reservation_id=769090",
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
     {
       "start": "2026-11-27T11:00:00",
       "end": null,
@@ -663,8 +679,8 @@
       "cancel_payload": {}
     }
   ],
-  "last_check": "2026-11-19T19:13:55.612372",
-  "last_action": "[DRY RUN] would book 11/26 12:00 (initial)",
+  "last_check": "2026-11-19T19:14:52.698460",
+  "last_action": "[DRY RUN] would book 11/20 15:00 (initial)",
   "last_error": null,
   "preferences": {
     "enabled": true,
@@ -700,6 +716,26 @@
       "ts": "2026-11-19T10:13:55.612212",
       "level": "info",
       "message": "[DRY RUN] would book 11/26 12:00 (initial)"
+    },
+    {
+      "ts": "2026-11-19T10:14:12.409570",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/20 15:00 (initial)"
+    },
+    {
+      "ts": "2026-11-19T10:14:25.481474",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/20 15:00 (initial)"
+    },
+    {
+      "ts": "2026-11-19T10:14:38.626781",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/20 15:00 (initial)"
+    },
+    {
+      "ts": "2026-11-19T10:14:52.698252",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/20 15:00 (initial)"
     }
   ]
 }
