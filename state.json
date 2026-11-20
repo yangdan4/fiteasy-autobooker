@@ -1,9 +1,57 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-20T10:12:35.090847",
+  "updated_at": "2026-11-20T10:13:28.996469",
   "current": null,
   "detected": [
+    {
+      "start": "2026-11-26T12:00:00",
+      "end": null,
+      "label": "11/26 12:00",
+      "slot_key": "2026-11-26T12:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F26&shop_id=230&start_time=12%3A00&deadline=2026-11-26+13%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
+    {
+      "start": "2026-11-26T14:00:00",
+      "end": null,
+      "label": "11/26 14:00",
+      "slot_key": "2026-11-26T14:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F26&shop_id=230&start_time=14%3A00&deadline=2026-11-26+15%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
+    {
+      "start": "2026-11-26T15:00:00",
+      "end": null,
+      "label": "11/26 15:00",
+      "slot_key": "2026-11-26T15:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F26&shop_id=230&start_time=15%3A00&deadline=2026-11-26+16%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
     {
       "start": "2026-11-27T11:00:00",
       "end": null,
@@ -595,59 +643,28 @@
       "cancel_action": null,
       "cancel_method": "get",
       "cancel_payload": {}
-    },
+    }
+  ],
+  "reservations": [
     {
-      "start": "2026-12-04T17:00:00",
+      "start": "2026-11-21T16:00:00",
       "end": null,
-      "label": "12/4 17:00",
-      "slot_key": "2026-12-04T17:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F04&shop_id=230&start_time=17%3A00&deadline=2026-12-04+18%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "label": "11/21 16:00",
+      "slot_key": "res-771134",
+      "available": false,
+      "room": "M-A",
+      "reservation_id": "771134",
+      "book_url": null,
       "book_action": null,
       "book_method": "get",
       "book_payload": {},
-      "cancel_action": null,
-      "cancel_method": "get",
-      "cancel_payload": {}
-    },
-    {
-      "start": "2026-12-04T18:00:00",
-      "end": null,
-      "label": "12/4 18:00",
-      "slot_key": "2026-12-04T18:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F04&shop_id=230&start_time=18%3A00&deadline=2026-12-04+19%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
-      "book_action": null,
-      "book_method": "get",
-      "book_payload": {},
-      "cancel_action": null,
-      "cancel_method": "get",
-      "cancel_payload": {}
-    },
-    {
-      "start": "2026-12-04T19:00:00",
-      "end": null,
-      "label": "12/4 19:00",
-      "slot_key": "2026-12-04T19:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F04&shop_id=230&start_time=19%3A00&deadline=2026-12-04+20%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
-      "book_action": null,
-      "book_method": "get",
-      "book_payload": {},
-      "cancel_action": null,
+      "cancel_action": "https://join.fiteasy.jp/mypage/sauna60-room/cancel/771134?date=2026%2F11%2F21&start_time=16%3A00&end_time=17%3A00&room=M-A&reservation_id=771134",
       "cancel_method": "get",
       "cancel_payload": {}
     }
   ],
-  "reservations": [],
-  "last_check": "2026-11-20T10:12:35.090998",
-  "last_action": "[DRY RUN] would book 11/27 11:00 (initial)",
+  "last_check": "2026-11-20T10:13:28.996650",
+  "last_action": "[DRY RUN] would book 11/26 12:00 (initial)",
   "last_error": null,
   "preferences": {
     "enabled": true,
@@ -683,6 +700,26 @@
       "ts": "2026-11-20T01:12:35.090819",
       "level": "info",
       "message": "[DRY RUN] would book 11/27 11:00 (initial)"
+    },
+    {
+      "ts": "2026-11-20T01:12:48.661246",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 12:00 (initial)"
+    },
+    {
+      "ts": "2026-11-20T01:13:02.177607",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 12:00 (initial)"
+    },
+    {
+      "ts": "2026-11-20T01:13:15.545366",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 12:00 (initial)"
+    },
+    {
+      "ts": "2026-11-20T01:13:28.996440",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 12:00 (initial)"
     }
   ]
 }
