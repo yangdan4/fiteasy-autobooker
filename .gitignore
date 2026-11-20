@@ -7,3 +7,62 @@ data/
 venv/
 .DS_Store
 debug_*.html
+
+# ---- Added by Claude: standard ignores ----
+# Secrets / env
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+
+# Node
+node_modules/
+.next/
+out/
+dist/
+build/
+.turbo/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# ML model weights (too large for GitHub / re-downloadable)
+*.onnx
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+*.gguf
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Local data/caches
+.data/
+.cache/
+coverage/
+
+test-results/
+.claude/settings.local.json
+*.lock.tmp
