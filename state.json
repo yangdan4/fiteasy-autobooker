@@ -1,89 +1,9 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-22T04:47:58.465329",
+  "updated_at": "2026-11-22T08:57:30.783177",
   "current": null,
   "detected": [
-    {
-      "start": "2026-11-26T14:00:00",
-      "end": null,
-      "label": "11/26 14:00",
-      "slot_key": "2026-11-26T14:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F26&shop_id=230&start_time=14%3A00&deadline=2026-11-26+15%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
-      "book_action": null,
-      "book_method": "get",
-      "book_payload": {},
-      "cancel_action": null,
-      "cancel_method": "get",
-      "cancel_payload": {}
-    },
-    {
-      "start": "2026-11-27T12:00:00",
-      "end": null,
-      "label": "11/27 12:00",
-      "slot_key": "2026-11-27T12:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F27&shop_id=230&start_time=12%3A00&deadline=2026-11-27+13%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
-      "book_action": null,
-      "book_method": "get",
-      "book_payload": {},
-      "cancel_action": null,
-      "cancel_method": "get",
-      "cancel_payload": {}
-    },
-    {
-      "start": "2026-11-27T13:00:00",
-      "end": null,
-      "label": "11/27 13:00",
-      "slot_key": "2026-11-27T13:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F27&shop_id=230&start_time=13%3A00&deadline=2026-11-27+14%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
-      "book_action": null,
-      "book_method": "get",
-      "book_payload": {},
-      "cancel_action": null,
-      "cancel_method": "get",
-      "cancel_payload": {}
-    },
-    {
-      "start": "2026-11-27T14:00:00",
-      "end": null,
-      "label": "11/27 14:00",
-      "slot_key": "2026-11-27T14:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F27&shop_id=230&start_time=14%3A00&deadline=2026-11-27+15%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
-      "book_action": null,
-      "book_method": "get",
-      "book_payload": {},
-      "cancel_action": null,
-      "cancel_method": "get",
-      "cancel_payload": {}
-    },
-    {
-      "start": "2026-11-27T15:00:00",
-      "end": null,
-      "label": "11/27 15:00",
-      "slot_key": "2026-11-27T15:00:00",
-      "available": true,
-      "room": null,
-      "reservation_id": null,
-      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F11%2F27&shop_id=230&start_time=15%3A00&deadline=2026-11-27+16%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
-      "book_action": null,
-      "book_method": "get",
-      "book_payload": {},
-      "cancel_action": null,
-      "cancel_method": "get",
-      "cancel_payload": {}
-    },
     {
       "start": "2026-11-30T13:00:00",
       "end": null,
@@ -643,11 +563,91 @@
       "cancel_action": null,
       "cancel_method": "get",
       "cancel_payload": {}
+    },
+    {
+      "start": "2026-12-06T12:00:00",
+      "end": null,
+      "label": "12/6 12:00",
+      "slot_key": "2026-12-06T12:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F06&shop_id=230&start_time=12%3A00&deadline=2026-12-06+13%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
+    {
+      "start": "2026-12-06T13:00:00",
+      "end": null,
+      "label": "12/6 13:00",
+      "slot_key": "2026-12-06T13:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F06&shop_id=230&start_time=13%3A00&deadline=2026-12-06+14%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
+    {
+      "start": "2026-12-06T14:00:00",
+      "end": null,
+      "label": "12/6 14:00",
+      "slot_key": "2026-12-06T14:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F06&shop_id=230&start_time=14%3A00&deadline=2026-12-06+15%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
+    {
+      "start": "2026-12-06T15:00:00",
+      "end": null,
+      "label": "12/6 15:00",
+      "slot_key": "2026-12-06T15:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F06&shop_id=230&start_time=15%3A00&deadline=2026-12-06+16%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
+    },
+    {
+      "start": "2026-12-06T16:00:00",
+      "end": null,
+      "label": "12/6 16:00",
+      "slot_key": "2026-12-06T16:00:00",
+      "available": true,
+      "room": null,
+      "reservation_id": null,
+      "book_url": "https://join.fiteasy.jp/mypage/sauna60-room/reservation?date=2026%2F12%2F06&shop_id=230&start_time=16%3A00&deadline=2026-12-06+17%3A00%3A00&rooms=%7B%2248%22%3A%22M-A%22%7D&select_minute_per_reservation=60",
+      "book_action": null,
+      "book_method": "get",
+      "book_payload": {},
+      "cancel_action": null,
+      "cancel_method": "get",
+      "cancel_payload": {}
     }
   ],
   "reservations": [],
-  "last_check": "2026-11-22T04:47:58.465448",
-  "last_action": "[DRY RUN] would book 11/26 14:00 (initial)",
+  "last_check": "2026-11-22T08:57:30.783335",
+  "last_action": "[DRY RUN] would book 11/30 13:00 (initial)",
   "last_error": null,
   "preferences": {
     "enabled": true,
@@ -675,114 +675,14 @@
   },
   "logs": [
     {
-      "ts": "2026-11-21T19:43:21.196219",
+      "ts": "2026-11-21T23:57:28.131674",
       "level": "info",
       "message": "Logged in to FitEasy"
     },
     {
-      "ts": "2026-11-21T19:43:24.271696",
+      "ts": "2026-11-21T23:57:30.783146",
       "level": "info",
       "message": "[DRY RUN] would book 11/30 13:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:43:40.014702",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:43:53.572526",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:44:07.169156",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:44:19.627678",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:44:33.536739",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:44:45.416142",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:44:57.528588",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:45:09.852309",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:45:21.655480",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:45:36.360052",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:45:47.669067",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:46:00.102213",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:46:15.772542",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:46:28.742885",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:46:41.184052",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:46:53.893868",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:47:06.798678",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:47:20.950575",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:47:32.976176",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
-    },
-    {
-      "ts": "2026-11-21T19:47:45.360525",
-      "level": "info",
-      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
     }
   ]
 }
