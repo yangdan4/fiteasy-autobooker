@@ -1,7 +1,7 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-21T13:02:01.448967",
+  "updated_at": "2026-11-21T13:02:56.037418",
   "current": null,
   "detected": [
     {
@@ -663,7 +663,7 @@
       "cancel_payload": {}
     }
   ],
-  "last_check": "2026-11-21T13:02:01.449108",
+  "last_check": "2026-11-21T13:02:56.037551",
   "last_action": "[DRY RUN] would book 11/26 14:00 (initial)",
   "last_error": null,
   "preferences": {
@@ -738,6 +738,26 @@
     },
     {
       "ts": "2026-11-21T04:02:01.448926",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-21T04:02:16.690305",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-21T04:02:31.144177",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-21T04:02:45.087220",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-21T04:02:56.037381",
       "level": "info",
       "message": "[DRY RUN] would book 11/26 14:00 (initial)"
     }
