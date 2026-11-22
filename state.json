@@ -1,7 +1,7 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-22T09:00:10.182703",
+  "updated_at": "2026-11-22T09:01:01.631536",
   "current": null,
   "detected": [
     {
@@ -646,7 +646,7 @@
     }
   ],
   "reservations": [],
-  "last_check": "2026-11-22T09:00:10.182808",
+  "last_check": "2026-11-22T09:01:01.631689",
   "last_action": "[DRY RUN] would book 11/26 14:00 (initial)",
   "last_error": null,
   "preferences": {
@@ -741,6 +741,26 @@
     },
     {
       "ts": "2026-11-22T00:00:10.182671",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-22T00:00:24.920886",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-22T00:00:37.658167",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-22T00:00:50.058500",
+      "level": "info",
+      "message": "[DRY RUN] would book 11/26 14:00 (initial)"
+    },
+    {
+      "ts": "2026-11-22T00:01:01.631507",
       "level": "info",
       "message": "[DRY RUN] would book 11/26 14:00 (initial)"
     }
