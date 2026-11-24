@@ -1,7 +1,7 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-24T14:52:19.139488",
+  "updated_at": "2026-11-24T14:53:05.742599",
   "current": null,
   "detected": [
     {
@@ -663,7 +663,7 @@
       "cancel_payload": {}
     }
   ],
-  "last_check": "2026-11-24T14:52:19.139716",
+  "last_check": "2026-11-24T14:53:05.742793",
   "last_action": "Booking 11/27 12:00 failed",
   "last_error": "Book 11/27 12:00 (room 48) -> HTTP 200 rejected",
   "preferences": {
@@ -718,6 +718,21 @@
     },
     {
       "ts": "2026-11-24T05:52:19.139443",
+      "level": "error",
+      "message": "Book 11/27 12:00 (room 48) -> HTTP 200 rejected"
+    },
+    {
+      "ts": "2026-11-24T05:52:35.850118",
+      "level": "error",
+      "message": "Book 11/27 12:00 (room 48) -> HTTP 200 rejected"
+    },
+    {
+      "ts": "2026-11-24T05:52:51.676544",
+      "level": "error",
+      "message": "Book 11/27 12:00 (room 48) -> HTTP 200 rejected"
+    },
+    {
+      "ts": "2026-11-24T05:53:05.742560",
       "level": "error",
       "message": "Book 11/27 12:00 (room 48) -> HTTP 200 rejected"
     }
