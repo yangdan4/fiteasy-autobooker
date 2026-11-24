@@ -73,7 +73,7 @@ function applyState(s) {
     $("date_from").value = p.date_from || "";
     $("date_to").value = p.date_to || "";
     $("min_improvement_minutes").value = p.min_improvement_minutes ?? 10;
-    $("rebook_strategy").value = p.rebook_strategy || "book_then_cancel";
+    $("rebook_strategy").value = p.rebook_strategy || "cancel_then_book";
     $("weeks_to_scan").value = p.weeks_to_scan ?? 3;
     $("manage_existing").value = String(p.manage_existing);
     $("poll_min_seconds").value = p.poll_min_seconds ?? 8;

@@ -56,13 +56,13 @@
         <div class="field two">
           <div><label>Min improvement (min)</label><input id="min_improvement_minutes" type="number" min="0" /></div>
           <div><label>Rebook strategy</label>
-            <select id="rebook_strategy"><option value="book_then_cancel">book → cancel</option><option value="cancel_then_book">cancel → book</option></select>
+            <select id="rebook_strategy"><option value="cancel_then_book">cancel → book (required)</option><option value="book_then_cancel">book → cancel (not supported by FitEasy)</option></select>
           </div>
         </div>
         <div class="field two">
           <div><label>Weeks to scan</label><input id="weeks_to_scan" type="number" min="1" max="12" /></div>
           <div><label>Manage existing bookings</label>
-            <select id="manage_existing"><option value="false">No — never cancel my manual bookings</option><option value="true">Yes — rebook my earliest reservation earlier</option></select>
+            <select id="manage_existing"><option value="true">Yes — rebook my earliest reservation earlier (recommended)</option><option value="false">No — never touch an existing reservation</option></select>
           </div>
         </div>
         <div class="field two">
