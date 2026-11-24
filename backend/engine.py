@@ -145,28 +145,17 @@ class Engine:
             self._log("info", self.state.last_action)
             return
 
-        if prefs.rebook_strategy == "book_then_cancel":
-            if await self.client.book(best):
-                await self.client.cancel(current)
-                store.save_current_booking(best)
-                self.state.current = best
-                self.state.last_action = f"Rebooked {msg}"
-            else:
-                self.state.last_action = f"Rebook aborted (new slot booking failed) {msg}"
-        else:  # cancel_then_book (assumes only one active reservation)
-            if await self.client.cancel(current):
-                if await self.client.book(best):
-                    store.save_current_booking(best)
-                    self.state.current = best
-                    self.state.last_action = f"Rebooked {msg}"
-                else:
-                    store.save_current_booking(None)
-                    self.state.current = None
-                    self.state.last_action = (
-                        f"Cancelled {current.label} but new booking failed — will retry"
-                    )
-            else:
-                self.state.last_action = f"Rebook aborted (cancel failed) {msg}"
+        # FitEasy allows only one active reservation, so rebooking is always
+        # cancel-then-book with restore-on-failure (handled in the client).
+        improved, managed = await self.client.rebook(current, best)
+        store.save_current_booking(managed)
+        self.state.current = managed
+        if improved:
+            self.state.last_action = f"Rebooked {msg}"
+        elif managed is current or (managed and managed.start == current.start):
+            self.state.last_action = f"Rebook aborted, kept {current.label} ({msg})"
+        else:
+            self.state.last_action = f"Rebook failed, no active reservation ({msg})"
 
     # ---------------------------------------------------------------- runloop
     async def _run(self) -> None:

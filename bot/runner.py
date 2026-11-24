@@ -155,23 +155,17 @@ class Runner:
             self.last_action = f"[DRY RUN] would rebook {msg}"
             self.log("info", self.last_action)
             return
-        if prefs.rebook_strategy == "cancel_then_book":
-            if await self.client.cancel(current):
-                if await self.client.book(best):
-                    self.managed = best
-                    self.last_action = f"Rebooked {msg}"
-                else:
-                    self.managed = None
-                    self.last_action = f"Cancelled old but new booking failed ({msg})"
-            else:
-                self.last_action = f"Rebook aborted (cancel failed) {msg}"
-        else:  # book_then_cancel
-            if await self.client.book(best):
-                await self.client.cancel(current)
-                self.managed = best
-                self.last_action = f"Rebooked {msg}"
-            else:
-                self.last_action = f"Rebook aborted (new booking failed) {msg}"
+        # FitEasy allows only one active reservation, so rebooking is always
+        # cancel-then-book (with restore-on-failure). book_then_cancel is not
+        # possible on this site; the client handles the single-booth constraint.
+        improved, managed = await self.client.rebook(current, best)
+        self.managed = managed
+        if improved:
+            self.last_action = f"Rebooked {msg}"
+        elif managed is current or (managed and managed.start == current.start):
+            self.last_action = f"Rebook aborted, kept {current.label} ({msg})"
+        else:
+            self.last_action = f"Rebook failed, no active reservation ({msg})"
 
     async def run(self) -> None:
         await self.gh.ensure_state_branch()

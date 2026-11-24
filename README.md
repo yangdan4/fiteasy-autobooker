@@ -74,9 +74,17 @@ Browser ── dashboard ──▶ FastAPI ──┬─ background loop (every ~
 
 **Rebook logic:** each cycle it finds the earliest slot that satisfies your rules.
 If you have no booking → it books. If an acceptable slot is earlier than your
-current booking by at least *min improvement* minutes → it rebooks (strategy
-configurable: `cancel_then_book` assumes one active reservation; `book_then_cancel`
-is safer if multiple are allowed).
+current booking by at least *min improvement* minutes → it rebooks.
+
+**Single-reservation rule (important):** FitEasy allows only **one active
+reservation at a time** ("既に予約されているブースがあるため予約できません"). So
+rebooking is always **cancel-then-book**: the bot cancels your current slot, then
+books the earlier one. If the new booking fails (slot taken in the race), the bot
+immediately re-grabs your original slot so you're never left with nothing. For the
+bot to manage the booking you already hold, `manage_existing` must be **true**
+(now the default). After each book/cancel the bot **re-scans to confirm** the
+result rather than trusting the response page (whose template always contains the
+word "エラー").
 
 ---
 

@@ -31,18 +31,20 @@ class Preferences(BaseModel):
     # How many calendar weeks ahead to scan each cycle (earliest acceptable wins).
     weeks_to_scan: int = 3
 
-    # If True, the bot treats your earliest existing reservation as its baseline and
-    # will rebook (and cancel) it to get earlier. If False (default), the bot never
-    # cancels reservations it did not create.
-    manage_existing: bool = False
+    # If True (default), the bot treats your earliest existing reservation as its
+    # baseline and will rebook it earlier. FitEasy allows only ONE active
+    # reservation, so this must be True for the bot to do anything once you hold a
+    # booking. If False, the bot never touches reservations it did not create.
+    manage_existing: bool = True
 
     # Poll cadence (seconds) — a random value in [min, max] is used each cycle.
     poll_min_seconds: float = 8.0
     poll_max_seconds: float = 12.0
 
-    # "book_then_cancel" (safe when multiple reservations are allowed, as here) or
-    # "cancel_then_book" (if only one active reservation is permitted).
-    rebook_strategy: str = "book_then_cancel"
+    # FitEasy permits only one active reservation, so rebooking is always
+    # cancel-then-book (the client restores the original slot if the new booking
+    # fails). "book_then_cancel" is not possible on this site.
+    rebook_strategy: str = "cancel_then_book"
 
 
 class Slot(BaseModel):
