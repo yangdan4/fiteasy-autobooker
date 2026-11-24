@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "dry_run": true,
+  "dry_run": false,
   "shop_id": "230",
   "earliest_time": "00:00",
   "latest_time": "18:00",
