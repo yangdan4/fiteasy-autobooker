@@ -1,7 +1,7 @@
 {
   "logged_in": true,
   "running": true,
-  "updated_at": "2026-11-25T18:30:45.379085",
+  "updated_at": "2026-11-25T18:31:38.730632",
   "current": {
     "start": "2026-11-27T12:00:00",
     "end": null,
@@ -678,7 +678,7 @@
       "cancel_payload": {}
     }
   ],
-  "last_check": "2026-11-25T18:30:45.379200",
+  "last_check": "2026-11-25T18:31:38.730778",
   "last_action": "Holding 11/27 12:00; best open 12/1 13:00",
   "last_error": null,
   "preferences": {
